@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input, textarea {
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+pre {
+    text-align: left;
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.ask-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ask-button:hover {
+    background-color: #0056b3;
+}
+
+#categorySearch {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    text-align: left;
+}
+
+.dropdown-content button:hover {
+    background-color: #0056b3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.frame {
+    width: 40%;
+    padding: 20px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    min-height: 100px;
+    box-sizing: border-box;
+    overflow: visible; /* Allow frame to expand as needed */
+    display: flex;
+    flex-direction: column;
+}
+
+#answerFrame {
+    white-space: normal; /* Allow normal text wrapping */
+    line-height: 1.6; /* Improve readability */
+    padding: 10px; /* Inner padding for spacing */
+    overflow: visible; /* Prevent any scrollbars */
+    flex-grow: 1; /* Allows the frame to grow */
+}
+
+/* Specific styles for pre and code blocks */
+#answerFrame pre {
+    white-space: pre-wrap; /* Wrap text within code blocks */
+    word-wrap: break-word;
+    background-color: #f4f4f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#answerFrame code {
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Styles for lists and bold text within the answer frame */
+#answerFrame ul, #answerFrame ol {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+#answerFrame li {
+    margin-bottom: 5px;
+}
+
+#answerFrame strong {
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#questionList {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Styles for each question box */
+.question {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Alternate background colors for readability */
+.question:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+.question:nth-child(odd) {
+    background-color: #e0e0e0;
+}
+
+/* Highlight the selected question */
+.question.selected {
+    background-color: #ffc107;
+    color: black;
+    font-weight: bold;
+}
+
+/* Make answer options appear on hover */
+.asked-question .answer-options {
+    display: none;
+    margin-top: 5px;
+}
+.asked-question:hover .answer-options {
+    display: block;
+}
+
+/* Vertical layout for asked questions */
+#askedQuestionsFrame {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Optional styling for clearer answer options */
+.answer-options label {
+    margin-right: 10px;
+}
+

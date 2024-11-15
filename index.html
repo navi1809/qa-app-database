@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question and Answers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Question and Answers</h1>
+	 <div class="dropdown">
+        <input type="text" id="categorySearch" placeholder="Search Category" oninput="filterCategories()">
+    <div id="categoryList" class="dropdown-content">
+        <button onclick="showQuestions('Code Quality and standards',this)">Code Quality and standards</button>
+        <button onclick="showQuestions('DateFormatter',this)">DateFormatter</button>
+        <button onclick="showQuestions('threadLocal',this)">threadLocal</button>
+		<button onclick="showQuestions('linux commands',this)">linux commands</button>
+        <button onclick="showQuestions('Java Primitives',this)">Java Primitives</button>
+        <button onclick="showQuestions('Java KeyWords',this)">Java KeyWords</button>
+		<button onclick="showQuestions('Sql Programatically',this)">Sql Programatically</button>
+        <button onclick="showQuestions('Exceptions-Programatically',this)">Exceptions-Programatically</button>
+        <button onclick="showQuestions('Wrappers',this)">Wrappers</button>
+		 <button onclick="showQuestions('Spring Transactions',this)">Spring Transactions</button>
+		  <button onclick="showQuestions('Spring Bean Scopes',this)">Spring Bean Scopes</button>
+        <button onclick="showQuestions('Functional Interfaces',this)">Functional Interfaces</button>
+        <button onclick="showQuestions('Terinary operations Java8',this)">Terinary operations Java8</button>
+		<button onclick="showQuestions('Intermidiate operations Java8',this)">Intermidiate operations Java8</button>
+        <button onclick="showQuestions('Map FlatMap',this)">Map FlatMap</button>
+        <button onclick="showQuestions('Streams',this)">Streams</button>
+		<button onclick="showQuestions('Java 8 Features',this)">Java 8 Features</button>
+        <button onclick="showQuestions('StringFunctions',this)">String Functions</button>
+        <button onclick="showQuestions('StringBuffer and StringBuilder',this)">StringBuffer and String Builder</button>
+		 <button onclick="showQuestions('interfaces',this)">interfaces</button>
+		  <button onclick="showQuestions('Abstract',this)">Abstract</button>
+        <button onclick="showQuestions('oauth',this)">oauth</button>
+        <button onclick="showQuestions('Logging',this)">Logging</button>
+		<button onclick="showQuestions('Aspects',this)">Aspects</button>
+        <button onclick="showQuestions('JdbcTemplate',this)">JdbcTemplate</button>
+        <button onclick="showQuestions('RestTemplate',this)">RestTemplate</button>
+		<button onclick="showQuestions('Spring Data JPA',this)">Spring Data JPA</button>
+        <button onclick="showQuestions('Spring boot',this)">Spring boot</button>
+        <button onclick="showQuestions('Netwrok Protocols',this)">Netwrok Protocols</button>
+		 <button onclick="showQuestions('IO operations',this)">IO operations</button>
+		  <button onclick="showQuestions('Serialization',this)">Serialization</button>
+        <button onclick="showQuestions('Synchronization',this)">Synchronization</button>
+        <button onclick="showQuestions('Static',this)">Static</button>
+		<button onclick="showQuestions('Comparable',this)">Comparable</button>
+        <button onclick="showQuestions('Comparator',this)">Comparator</button>
+        <button onclick="showQuestions('Set',this)">Set</button>
+		<button onclick="showQuestions('TreeMap',this)">TreeMap</button>
+        <button onclick="showQuestions('HashMap',this)">HashMap</button>
+        <button onclick="showQuestions('LinkedList',this)">LinkedList</button>
+		 <button onclick="showQuestions('ArrayList',this)">ArrayList</button>
+		  <button onclick="showQuestions('Arrays',this)">Arrays</button>
+        <button onclick="showQuestions('Generics',this)">Generics</button>
+        <button onclick="showQuestions('CICD',this)">CICD</button>
+		<button onclick="showQuestions('production support',this)">production support</button>
+        <button onclick="showQuestions('Exceptions',this)">Exceptions</button>
+        <button onclick="showQuestions('Hard Java',this)">Hard Java </button>
+		<button onclick="showQuestions('maven',this)">maven</button>
+        <button onclick="showQuestions('Sql',this)">Sql</button>
+        <button onclick="showQuestions('Angular',this)">Angular</button>
+		 <button onclick="showQuestions('Jquery',this)">Jquery</button>
+		  <button onclick="showQuestions('Security',this)">Security</button>
+        <button onclick="showQuestions('Micro Services',this)">Micro Services</button>
+        <button onclick="showQuestions('Rest Services',this)">Rest Services</button>
+		<button onclick="showQuestions('Spring Security',this)">Spring Security</button>
+        <button onclick="showQuestions('Spring batches',this)">Spring batches</button>
+        <button onclick="showQuestions('Spring MVC',this)">Spring MVC</button>
+		<button onclick="showQuestions('Java8',this)">Java8</button>
+        <button onclick="showQuestions('Collections',this)">Collections</button>
+        <button onclick="showQuestions('Strings And Wrappers',this)">Strings And Wrappers</button>
+		 <button onclick="showQuestions('Core Java',this)">Core Java</button>
+    </div>
+	 </div>
+	<div class="content">
+        <div class="frame" id="questionList">Select a category to load questions here.</div>
+        <div class="frame" id="answerFrame">Answer will appear here.</div>
+    </div>
+
+    <div id="askButtonContainer"></div> <!-- Container for the "Asked" button -->
+
+    <h2>Asked Questions</h2>
+    <div id="askedQuestionsFrame" class="content"></div> <!-- Container for displaying asked questions -->
+
+	 <div>
+        <button onclick="fetchChanges()">Fetch Changes</button>
+        <button onclick="pushChanges()">Push Changes</button>
+    </div>
+
+    <div>
+        <h2>Add Key-Value Pair</h2>
+        <input type="text" id="keyInput" placeholder="Enter key (e.g., Question)" />
+        <textarea id="valueInput" placeholder="Enter value (e.g., Answer)"></textarea>
+        <button onclick="addEntry()">Add Entry</button>
+    </div>
+
+    <div>
+        <h2>Current Entries</h2>
+        <pre id="entries"></pre>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
